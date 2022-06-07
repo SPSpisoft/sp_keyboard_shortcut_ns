@@ -1,6 +1,6 @@
 name: sp_keyboard_shortcut_ns
 description: keyboard shortcut
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/SPSpisoft/sp_keyboard_shortcut_ns
 
 environment:
