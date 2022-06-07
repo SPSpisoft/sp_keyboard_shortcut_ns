@@ -68,7 +68,7 @@ class KeyBoardShortcuts extends StatefulWidget {
   final Widget child;
 
   /// You can use shortCut function with BasicShortCuts to avoid write data by yourself
-  final Set<LogicalKeyboardKey> keysToPress;
+  final Set<LogicalKeyboardKey>? keysToPress;
 
   /// Function when keys are pressed
   final VoidCallback? onKeysPressed;
@@ -79,7 +79,7 @@ class KeyBoardShortcuts extends StatefulWidget {
   /// Activate when this widget is the first of the page
   final bool globalShortcuts;
 
-  const KeyBoardShortcuts({required this.keysToPress, this.onKeysPressed, this.helpLabel, this.globalShortcuts = false, required this.child, Key? key})
+  const KeyBoardShortcuts({this.keysToPress, this.onKeysPressed, this.helpLabel, this.globalShortcuts = false, required this.child, Key? key})
       : super(key: key);
 
   @override
