@@ -211,7 +211,7 @@ class _KeyBoardShortcuts extends State<KeyBoardShortcuts> {
           ).then((value) => _helperIsOpen = false);
         }
       } else if (widget.globalShortcuts) {
-        if (_isPressed(keysPressed, {LogicalKeyboardKey.home})) {
+        if (_isPressed(keysPressed, {LogicalKeyboardKey.home}) && _homeWidget != null) {
           Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => _homeWidget!), (_) => false);
         } else if (_isPressed(keysPressed, {LogicalKeyboardKey.escape})) {
           Navigator.maybePop(context);

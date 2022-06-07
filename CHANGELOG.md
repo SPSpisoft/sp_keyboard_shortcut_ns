@@ -15,3 +15,6 @@
 
 ## 0.0.6
 * TODO: debug home page.
+* 
+## 0.0.7
+* TODO: debug.
