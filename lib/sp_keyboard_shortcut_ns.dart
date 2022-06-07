@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:tuple/tuple.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-late Widget _homeWidget;
+Widget? _homeWidget;
 List<_KeyBoardShortcuts> _keyBoardShortcuts = [];
 Widget? _customGlobal;
 String? _customTitle;
@@ -212,7 +212,7 @@ class _KeyBoardShortcuts extends State<KeyBoardShortcuts> {
         }
       } else if (widget.globalShortcuts) {
         if (_isPressed(keysPressed, {LogicalKeyboardKey.home})) {
-          Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => _homeWidget), (_) => false);
+          Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => _homeWidget!), (_) => false);
         } else if (_isPressed(keysPressed, {LogicalKeyboardKey.escape})) {
           Navigator.maybePop(context);
         } else if (controllerIsReady && keysPressed.containsAll({LogicalKeyboardKey.pageDown}) ||
